@@ -28,7 +28,7 @@ tick_t tickRead();
 * @brief attachs the callback function to the ticker
 */
 void nonBlockingDelay::tickInit() {
-    this->ticker.attach( tickerCallback, 1ms );
+    this->ticker.attach( tickerCallback, 0.01);
 }
 
 //=====[Implementations of public methods]===================================
