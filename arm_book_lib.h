@@ -5,8 +5,6 @@
 
 //=====[Libraries]=============================================================
 
-#include <mbed.h>
-
 //=====[Declaration of public defines]=========================================
 
 // Functional states

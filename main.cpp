@@ -1,5 +1,6 @@
 #include "mbed.h"
 #include "non_Blocking_Delay.h"
+//#include "arm_book_lib.h"
 //#include "mbed2/323/TARGET_NUCLEO_F042K6/TARGET_STM/TARGET_STM32F0/TARGET_NUCLEO_F042K6/PinNames.h"
 
 #define LATENCY 10
@@ -20,8 +21,13 @@ nonBlockingDelay delay (LATENCY );
 char StringToSend [15] = "Hola Mundo!\n";
 
 
+
+
 int main() {
+    LED = 1;
+    LEDB = 0;
     while (true) {
+
         if( delay.read()) {
             uartUsb.printf(StringToSend );
             LED = !LED;
